@@ -3,11 +3,9 @@ import numpy as np
 
 from src.sigmoid import sigmoid             # Función sigmoidal
 from src.step import step                  # Función escalón
-#from src.gaussiana import gaussian            # Función gaussiana
-from src.sign import sign             # Función identidad
-from src.linear import linear      # Función lineal a tramos
-from src.relu import relu                     # Función ReLU (Rectified Linear Unit)
-#from src.sinusoidal import sinusoidal         # Función sinusoidal
+from src.sign import sign             # Función 
+from src.linear import linear      # Función lineal 
+from src.relu import relu                     # Función ReLU 
 from src.tahn import tanh       # Función tangente hiperbólica  
 
 # Función para graficar funciones de activación y sus derivadas
