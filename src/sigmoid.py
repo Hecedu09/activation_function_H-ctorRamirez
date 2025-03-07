@@ -1,7 +1,8 @@
 import numpy as np
-
-# Función sigmoide: usada comúnmente en redes neuronales para mapear valores entre 0 y 1
-# Su derivada es útil para el retropropagación en aprendizaje profundo
+"""
+Sigmoid function: commonly used in neural networks to map values between 0 and 1.
+Its derivative is useful for backpropagation in deep learning."
+"""
 def sigmoid(x, derivative=False):
     sig = 1 / (1 + np.exp(-x))
     if derivative:

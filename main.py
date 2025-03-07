@@ -1,30 +1,30 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from src.sigmoid import sigmoid             # Función sigmoidal
-from src.step import step                  # Función escalón
-from src.sign import sign             # Función 
-from src.linear import linear      # Función lineal 
-from src.relu import relu                     # Función ReLU 
-from src.tahn import tanh       # Función tangente hiperbólica  
+from src.sigmoid import sigmoid             # Sigmoid function
+from src.step import step                   # Step function
+from src.sign import sign                   # Sign function
+from src.linear import linear               # Linear function
+from src.relu import relu                    # ReLU function
+from src.tahn import tanh                    # Hyperbolic tangent function  
 
-# Función para graficar funciones de activación y sus derivadas
+# Function to plot activation functions and their derivatives
 def plot_activation_function(func, x_range, title, derivative=False, num_points=200):
     x = np.linspace(*x_range, num_points)
     y = func(x, derivative)
     plt.plot(x, y, label=title)
     plt.title(title)
-    plt.xlabel("Entrada")
-    plt.ylabel("Salida")
+    plt.xlabel("Input")
+    plt.ylabel("Output")
     plt.legend()
     plt.grid()
 
-# Función principal que organiza las gráficas
+# Main function that organizes the plots
 def main():
     x_range = (-5, 5)
     plt.figure(figsize=(12, 8))
     
-    # Graficar funciones de activación
+    # Plot activation functions
     plt.subplot(2, 3, 1)
     plot_activation_function(sigmoid, x_range, "Sigmoid")
     plt.subplot(2, 3, 2)
@@ -40,7 +40,7 @@ def main():
     
     plt.figure(figsize=(12, 4))
     
-    # Graficar derivadas de funciones de activación juntas
+    # Plot activation function derivatives together
     plt.subplot(1, 4, 1)
     plot_activation_function(sigmoid, x_range, "Sigmoid Derivative", True)
     plt.subplot(1, 4, 2)
@@ -53,6 +53,6 @@ def main():
     plt.tight_layout()
     plt.show()
 
-# Punto de entrada del programa
+# Program entry point
 if __name__ == "__main__":
     main()

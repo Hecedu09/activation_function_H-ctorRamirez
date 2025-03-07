@@ -1,8 +1,9 @@
 import numpy as np
-
-# Función signo: devuelve -1, 0 o 1 dependiendo del signo del valor de entrada
-# Su derivada es 0 en casi todos los puntos, excepto en discontinuidades
+"""
+Sign function: returns -1, 0 or 1 depending on the sign of the input value
+Its derivative is 0 at almost all points, except at discontinuities
+"""
 def sign(x, derivative=False):
     if derivative:
-        return np.zeros_like(x)  # La derivada de sign es 0 en casi todos los puntos
+        return np.zeros_like(x)
     return np.sign(x)
